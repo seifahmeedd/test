@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <a href="index.php" class="eb-logo">
+        <img src="logo/logo.png" alt="Eventify logo" class="logo-img">
+        <div>
+          <div class="brand">Eventify</div>
+          <div class="muted">Admin Dashboard</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.php" class="btn">Home</a>
+        <a href="admin.php" class="btn">Admin</a>
+        <a href="login.php" class="btn">Logout</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="dash">
+        <aside class="sidenav card">
+          <a href="admin.php" class="btn">Overview</a>
+          <a href="adminUsers.php" class="btn active">Users</a>
+          <a href="adminEvents.php" class="btn">Events</a>
+          <a href="adminLogs.php" class="btn">Logs</a>
+        </aside>
+
+        <div>
+          <div class="card">
+            <h2>Manage Users</h2>
+          </div>
+
+          <div class="card">
+            <table>
+              <tr>
+              <td>1</td>
+              <td>Sarah Johnson</td>
+              <td>sarah.johnson@email.com</td>
+              <td>Admin</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn small">Edit</button>
+                <button class="btn small danger">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Michael Lee</td>
+              <td>michael.lee@email.com</td>
+              <td>User</td>
+              <td><span class="status suspended">Suspended</span></td>
+              <td>
+                <button class="btn small">Edit</button>
+                <button class="btn small danger">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Olivia Smith</td>
+              <td>olivia.smith@email.com</td>
+              <td>User</td>
+              <td><span class="status active">Active</span></td>
+              <td>
+                <button class="btn small">Edit</button>
+                <button class="btn small danger">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+            </table>
+          </div>
+
+          <div class="card" style="margin-top: 20px;">
+            <h3>Add New User</h3>
+            <form class="user-form">
+              <div class="form-grid">
+                <div>
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter full name" />
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="Enter email" />
+            </div>
+            <div>
+              <label>Role</label>
+              <select>
+                <option>User</option>
+                <option>Admin</option>
+              </select>
+            </div>
+            <div>
+              <label>Status</label>
+              <select>
+                <option>Active</option>
+                <option>Suspended</option>
+              </select>
+            </div>
+              </div>
+              <button class="btn primary" type="submit">Add User</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Eventify &copy; 2025 - Admin Dashboard
+    </footer>
+  </div>
+</body>
+</html>
