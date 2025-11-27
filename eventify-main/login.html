@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <a href="index.html" class="eb-logo">
+                <img src="logo/logo.png" alt="Eventify logo" class="logo-img">
+            </a>
+            <nav>
+                <a href="index.html" class="btn">Home</a>
+                <a href="events.html" class="btn">Events</a>
+                <a href="login.html" class="btn">Login</a>
+                <a href="register.html" class="btn primary">Register</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="card" style="max-width: 400px; margin: 0 auto;">
+                <h2>Login</h2>
+                <form action="dashboard.html" method="GET">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="your@email.com">
+                    
+                    <label>Password</label>
+                    <input type="password" name="password" required placeholder="Enter your password">
+                    
+                    <div class="row" style="margin-top: 20px;">
+                        <button type="submit" class="btn primary" style="flex: 1;">Login</button>
+                    </div>
+                </form>
+                
+                <p style="text-align: center; margin-top: 20px;" class="muted">
+                    Don't have an account? <a href="register.html">Register here</a>
+                </p>
+                
+                <div class="muted" style="margin-top: 20px; font-size: 12px;">
+                    <strong>Demo Tip:</strong> Use any email to login
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Eventify &copy; 2024 - Event Ticketing System
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <a href="index.html" class="eb-logo">
+                <img src="logo/logo.png" alt="Eventify logo" class="logo-img">
+            </a>
+            <nav>
+                <a href="index.html" class="btn">Home</a>
+                <a href="events.html" class="btn">Events</a>
+                <a href="login.html" class="btn">Login</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="card">
+                <h1>Checkout</h1>
+                <p class="muted">Review your order and complete payment</p>
+
+                <div class="hero">
+                    <div class="left">
+                        <h3>Order Summary</h3>
+                        <div class="card">
+                            <div class="row" style="justify-content: space-between;">
+                                <div>
+                                    <h4>Indie Music Night</h4>
+                                    <p class="muted">General Admission × 1</p>
+                                </div>
+                                <div>$25.00</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <h3>Payment Information</h3>
+                            <form action="payment-confirmation.html" method="GET">
+                                <label>Cardholder Name</label>
+                                <input type="text" placeholder="John Doe" required>
+                                
+                                <label>Card Number</label>
+                                <input type="text" placeholder="1234 5678 9012 3456" required>
+                                
+                                <div class="row">
+                                    <div style="flex: 1;">
+                                        <label>Expiry Date</label>
+                                        <input type="text" placeholder="MM/YY" required>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <label>CVV</label>
+                                        <input type="text" placeholder="123" required>
+                                    </div>
+                                </div>
+
+                                <div style="margin: 20px 0;">
+                                    <input type="checkbox" id="save-card" checked>
+                                    <label for="save-card">Save card for future payments</label>
+                                </div>
+
+                                <button type="submit" class="btn primary" style="width: 100%;">
+                                    Pay Now - $25.00
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="right card">
+                        <h3>Order Total</h3>
+                        <div class="row" style="justify-content: space-between;">
+                            <span>Subtotal</span>
+                            <span>$25.00</span>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <span>Service Fee</span>
+                            <span>$2.50</span>
+                        </div>
+                        <div class="row" style="justify-content: space-between;">
+                            <span>Tax</span>
+                            <span>$1.75</span>
+                        </div>
+                        <hr>
+                        <div class="row" style="justify-content: space-between; font-size: 1.2em; font-weight: bold;">
+                            <span>Total</span>
+                            <span>$29.25</span>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding: 15px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                            <p class="muted" style="font-size: 12px;">
+                                🔒 Your payment is secure and encrypted. We do not store your card details.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Eventify &copy; 2024 - Secure Checkout
+        </footer>
+    </div>
+</body>
+</html>

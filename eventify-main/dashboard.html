@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - My Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-section {
+            display: none;
+        }
+        .dashboard-section.active {
+            display: block;
+        }
+        #tickets {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <a href="index.html" class="eb-logo">
+                <img src="logo/logo.png" alt="Eventify logo" class="logo-img">
+            </a>
+            <nav>
+                <a href="index.html" class="btn">Home</a>
+                <a href="events.html" class="btn">Events</a>
+                <a href="dashboard.html" class="btn">Dashboard</a>
+                <a href="login.html" class="btn">Logout</a>
+            </nav>
+        </header>
+
+        <main class="container">
+            <section class="dash">
+                <aside class="sidenav card">
+                    <a href="#tickets" class="active" onclick="showSection('tickets')">My Tickets</a>
+                    <a href="#orders" onclick="showSection('orders')">My Orders</a>
+                    <a href="#settings" onclick="showSection('settings')">Profile Settings</a>
+                    <a href="events.html">Browse Events</a>
+                    <a href="login.html">Logout</a>
+                </aside>
+
+                <div>
+                    <div class="welcome-banner card" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-light)); color: white; margin-bottom: 20px;">
+                        <h2>Welcome back, User! 👋</h2>
+                        <p>Here's what's happening with your events</p>
+                    </div>
+                    
+                    <div class="card">
+                    <div id="tickets" class="dashboard-section">
+                        <div class="card">
+                            <h2>My Tickets</h2>
+                            <p class="muted">Your upcoming events and tickets</p>
+                        
+                        <div class="card" style="margin-top: 20px;">
+                            <div class="row" style="justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h3>Indie Music Night</h3>
+                                    <p class="muted">The Loft • Nov 10, 2024 • 7:00 PM</p>
+                                    <div class="tag">Confirmed</div>
+                                </div>
+                                <div class="row">
+                                    <a href="ticket.html" class="btn">View Ticket</a>
+                                    <a href="ticket.html" class="btn primary">Download</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="margin-top: 15px;">
+                            <div class="row" style="justify-content: space-between; align-items: center;">
+                                <div>
+                                    <h3>Tech Startup Meetup</h3>
+                                    <p class="muted">Hub 9 • Nov 22, 2024 • 6:30 PM</p>
+                                    <div class="tag">Confirmed</div>
+                                </div>
+                                <div class="row">
+                                    <a href="ticket.html" class="btn">View Ticket</a>
+                                    <a href="ticket.html" class="btn primary">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <!-- My Orders Section -->
+                    <div id="orders" class="dashboard-section" style="display: none;">
+                        <div class="card">
+                            <h2>Order History</h2>
+                            <p class="muted">Your purchase history and payment details</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#EVT-001</td>
+                                    <td>Indie Music Night</td>
+                                    <td>Nov 5, 2024</td>
+                                    <td>$25.00</td>
+                                    <td><span class="tag">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#EVT-002</td>
+                                    <td>Tech Startup Meetup</td>
+                                    <td>Nov 3, 2024</td>
+                                    <td>$0.00</td>
+                                    <td><span class="tag">Completed</span></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Profile Settings Section -->
+                    <div id="settings" class="dashboard-section" style="display: none;">
+                        <div class="card">
+                            <h2>Profile Settings</h2>
+                            <p class="muted">Manage your account preferences</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Eventify &copy; 2024 - Event Ticketing System
+        </footer>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.dashboard-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Update active state in navigation
+            document.querySelectorAll('.sidenav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.sidenav a[href="#${sectionId}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>

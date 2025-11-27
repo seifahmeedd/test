@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Ticket | Eventify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header>
+      <a href="index.html" class="eb-logo">
+        <img src="logo/logo.png" alt="Eventify logo" class="logo-img" />
+        <div>
+          <div class="brand">Eventify</div>
+          <div class="muted">Your Ticket</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html" class="btn">Home</a>
+        <a href="events.html" class="btn">Events</a>
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn primary">Register</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <section class="dash">
+        <!-- Sidebar Navigation -->
+        <aside class="sidenav card">
+          <a href="index.html" class="btn">Home</a>
+          <a href="events.html" class="btn">Events</a>
+          <a href="login.html" class="btn">Login</a>
+          <a href="register.html" class="btn">Register</a>
+        </aside>
+
+        <!-- Ticket Details -->
+        <div>
+          <div class="card ticket-card center" style="flex-direction: column; text-align: center;">
+            <div class="emoji-hero" style="font-size: 3rem;">🎟️</div>
+            <h2>Concert Night 2025</h2>
+            <p class="muted">Cairo Opera House • Nov 22, 2025</p>
+
+            <div class="ticket-info" style="margin: 20px 0;">
+              <div><strong>Seat:</strong> B12</div>
+              <div><strong>Time:</strong> 7:00 PM</div>
+              <div><strong>Price:</strong> 250 EGP</div>
+              <div><strong>Entry Code:</strong> CN25-B12</div>
+            </div>
+
+            <div class="qr-area" style="margin: 20px 0;">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?data=CN25-B12&size=130x130" alt="QR Code" />
+              <p class="muted">Scan this at the gate</p>
+            </div>
+
+            <button class="btn primary" id="downloadBtn">⬇️ Download Ticket (PDF)</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      Eventify &copy; 2025 - Ticketing System
+    </footer>
+  </div>
+
+  <!-- Button Animation Script -->
+  <script>
+    const btn = document.getElementById('downloadBtn');
+    btn.addEventListener('click', () => {
+      btn.textContent = "✅ Ticket Downloaded!";
+      btn.style.background = "linear-gradient(90deg, #16a34a, #22c55e)";
+      setTimeout(() => {
+        btn.textContent = "⬇️ Download Ticket (PDF)";
+        btn.style.background = "linear-gradient(90deg, #5c6cff, #00a8ff)";
+      }, 2500);
+    });
+  </script>
+</body>
+</html>
